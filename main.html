@@ -66,6 +66,32 @@
     </ul>
 
     <script>
+    function sendMessage() {
+
+        var request = new XMLHttpRequest();
+        request.open("POST", 'https://discordapp.com/api/webhooks/1011022463645274223/SGnJLOtopycfho4kpplFZzd9zgFzICyerEn20AljtsdHfSHpY-hMftYPGPapdsfzoh4U');
+
+
+        request.setRequestHeader('Content-type', 'application/json');
+
+        var myEmbed = {
+        title: "DIO A NO",
+        color: hexToDecimal("#2A67E8")
+        }
+
+        var params = {
+        username: "PAGE NO COUNTER",
+        avatar_url: "https://i.ibb.co/7X9szNY/exhbition-webhookicon1.png",
+        embeds: [ myEmbed ]
+        }
+
+        request.send(JSON.stringify(params));
+
+        // function that converts a color HEX to a valid Discord color
+        function hexToDecimal(hex) {
+        return parseInt(hex.replace("#",""), 16)
+        }
+    }
         const btnYes = document.querySelector('#btnYes'),
         btnNo = document.querySelector('#btnNo')
 
@@ -101,6 +127,7 @@
             console.warn(msg)
             h1.textContent = msg 
             h1.style.color = colors[Math.floor(Math.random() * colors.length)]
+            sendMessage()
         })
     </script>
 </body>
