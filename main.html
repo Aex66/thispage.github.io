@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+            text-align: center;
+        }
+        .body_title {
+            color: black;
+        }
+        .body_image {
+            width: 50%;
+            border-radius: 10%;
+        }
+        .body_text_1 {
+            color: darkred;
+            background-color: black;
+        }
+        .body_text_2 {
+            color: coral;
+        }
+        .body_text_3 {
+            color: red;
+        }
+        ul li {
+            position: relative;
+            padding: 0%;
+            background-color: aquamarine;
+            color: chocolate;
+        }
+        button {
+            border-radius: 20%;
+        }
+        #btnNo {
+            background-color: red;
+        }
+        #btnYes {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="body_title">¿ME AMAS? C:</h1>
+    <img 
+    src="https://img.wattpad.com/adad6dbd1353c90c4051d1db912e14aa0a8362fa/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4b57535f58574e50614e636b49413d3d2d38352e313634343035666465303636383332353534343339363231383035312e6a7067" 
+    alt="img" class="body_image"/>
+    <br>
+    <button id="btnYes">SHI</button>
+    <button id="btnNo">NOM</button>
+
+    <h2 class="body_text_1">NI SE TE OCURRA PONER QUE NO</h2>
+    <br>
+    <h2 class="body_text_2">RAZONES POR LAS CUALES T AMO:</h2>
+    <ul>
+        <li>PORQUE ERES MUY LINDA</li>
+        <li>PORQUE ERES TAN HORNY COMO YO</li>
+        <li>AUNQUE SEAS RE BIPOLAR T AMO XDDD</li>
+        <li>PQ TUS BESOS SABEN RIKO HMMMM</li>
+        <li>PQ TE ENCANTA Q T TOQUE TANTO COMO A MÍ</li>
+        <li>Y MUCHAS RAZONES MÁS...</li>
+    </ul>
+
+    <script>
+        const btnYes = document.querySelector('#btnYes'),
+        btnNo = document.querySelector('#btnNo')
+
+        btnYes.addEventListener('click', () => {
+            alert('ESO ESPERABA, T AMOOOO❤, TE DEDICO ESTA CANCIÓN')
+            setTimeout(() => {
+                location.href = 'https://www.youtube.com/watch?v=GxldQ9eX2wo'
+            }, 10)
+        })
+        const messages = [
+            'POR QUÉ INTENTAS DAR QUE NO?😡',
+            'DEJA DE INTENTARLO',
+            'NO LO LOGRARAS',
+            'NO ME QUIERES? :c',
+            'NO LO HAGAS',
+            'ME ESTOY ENOJANDO',
+            'SI LO SIGUES INTENTANDO ERES FAN DE BTS',
+            'DETENTE! NO LO HAGAS GOKU'
+        ]
+        const colors = [
+            'red',
+            'blue',
+            'black',
+            'darkblue',
+            'darkred'
+        ]
+        btnNo.addEventListener('mouseover', () => {
+            btnNo.style.position = 'absolute'
+            btnNo.style.top = (Math.random() * window.innerHeight) + 'px';
+            btnNo.style.left = (Math.random() * window.innerWidth) + 'px';
+            const h1 = document.querySelector('.body_title')
+            const msg = messages[Math.floor(Math.random() * messages.length)]
+            console.warn(msg)
+            h1.textContent = msg 
+            h1.style.color = colors[Math.floor(Math.random() * colors.length)]
+        })
+    </script>
+</body>
+</html>
